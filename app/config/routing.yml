@@ -1,6 +1,8 @@
-acme_hello:
-    resource: "@AcmeHelloBundle/Resources/config/routing.yml"
-    prefix:   /
+hello:
+  pattern:	/hello/{first_name}/{last_name}
+  defaults: { _controller: AcmeHelloBundle:Hello:index, color: green}
+#  resource: "@AcmeHelloBundle/Resources/config/routing.yml"
+#  prefix:   /
 
 # Internal routing configuration to handle ESI
 #_internal:
