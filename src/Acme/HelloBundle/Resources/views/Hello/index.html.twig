@@ -1,5 +1,9 @@
 {% extends '::base.html.twig' %}
 {% block title %}Hello Twig{% endblock %}
 {% block body %}
-Hello {{ name }}
+	{% for flashMessage in app.session.flashbag.get('notice') %}
+	<div class="flash-message">
+		{{ flashMessage }}
+	</div>
+	{% endfor %}
 {% endblock %}
