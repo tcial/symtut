@@ -19,8 +19,9 @@ class AppKernel extends Kernel
             new JMS\AopBundle\JMSAopBundle(),
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-			new Acme\HelloBundle\AcmeHelloBundle(),
-			new Acme\TestBundle\TestBundle(),
+            new Acme\HelloBundle\AcmeHelloBundle(),
+            new Acme\TestBundle\TestBundle(),
+            new Acme\BlogBundle\BlogBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -35,6 +36,6 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load(__DIR__ . '/config/config_' . $this->getEnvironment() . '.yml');
     }
 }
