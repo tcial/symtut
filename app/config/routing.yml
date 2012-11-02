@@ -17,6 +17,21 @@ homepage:
   defaults: { _controller: BlogBundle:Blog:homepage, culture: en}
   requirements:
     culture: en|de|fr
+
+
+contact:
+  pattern: /contact
+  defaults: { _controller: BlogBundle:Blog:contact }
+  requirements:
+    _method: get
+
+contact_process:
+  pattern: /contact
+  defaults: { _controller: BlogBundle:Blog:contactProcess }
+  requirements:
+    _method: post
+
+
 #  resource: "@AcmeHelloBundle/Resources/config/routing.yml"
 #  prefix:   /
 

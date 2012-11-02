@@ -24,4 +24,15 @@ class BlogController extends Controller
     {
         return new Response("homepage with culture $culture");
     }
+
+
+    public function contactAction()
+    {
+        return new Response('contact via get');
+    }
+
+    public function contactProcessAction()
+    {
+        return new Response('contact via post');
+    }
 }
