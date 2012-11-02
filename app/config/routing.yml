@@ -18,7 +18,6 @@ homepage:
   requirements:
     culture: en|de|fr
 
-
 contact:
   pattern: /contact
   defaults: { _controller: BlogBundle:Blog:contact }
@@ -30,6 +29,14 @@ contact_process:
   defaults: { _controller: BlogBundle:Blog:contactProcess }
   requirements:
     _method: post
+
+article_show:
+  pattern: /articles/{culture}/{year}/{title}.{_format}
+  defaults: { _controller: BlogBundle:Article:show, _format:html }
+  requirements:
+    culture: en|fr|de
+    year: \d+
+    _format: html|rss
 
 
 #  resource: "@AcmeHelloBundle/Resources/config/routing.yml"
