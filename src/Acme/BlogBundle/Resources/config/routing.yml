@@ -1,0 +1,7 @@
+article_show:
+  pattern: /articles/{culture}/{year}/{title}.{_format}
+  defaults: { _controller: BlogBundle:Article:show, _format:html }
+  requirements:
+    culture: en|fr|de
+    year: \d+
+    _format: html|rss
