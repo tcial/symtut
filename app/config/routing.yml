@@ -2,10 +2,21 @@ hello:
   pattern:	/hello/{first_name}/{last_name}
   defaults: { _controller: AcmeHelloBundle:Hello:index, color: green}
 
+blog:
+  pattern: /blog/{page}
+  defaults: { _controller: BlogBundle:Blog:index, page: 1}
+  requirements:
+    page: \d+
+
 blog_show:
   pattern: /blog/{slug}
   defaults: { _controller: BlogBundle:Blog:show, slug: 'mäh' }
 
+homepage:
+  pattern: /{culture}
+  defaults: { _controller: BlogBundle:Blog:homepage, culture: en}
+  requirements:
+    culture: en|de|fr
 #  resource: "@AcmeHelloBundle/Resources/config/routing.yml"
 #  prefix:   /
 
