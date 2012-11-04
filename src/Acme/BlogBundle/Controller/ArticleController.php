@@ -10,4 +10,15 @@ class ArticleController extends Controller
     {
         return new Response("show article $_route $_controller");
     }
+
+    public function genUrlAction()
+    {
+        $router = $this->get('router');
+        $result = $router->match('/articles/fr/2000/title');
+        $result = print_r($result, true);
+
+        return new Response(
+            "$result"
+        );
+    }
 }
