@@ -5,7 +5,3 @@ article_show:
     culture: en|fr|de
     year: \d+
     _format: html|rss
-
-gen_url:
-  pattern: /gen
-  defaults: { _controller: BlogBundle:Article:genUrl }

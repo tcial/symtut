@@ -33,10 +33,10 @@ contact_process:
 blog:
   resource: "@BlogBundle/Resources/config/routing.yml"
 
-#  resource: "@AcmeHelloBundle/Resources/config/routing.yml"
-#  prefix:   /
+gen_url:
+  pattern: /gen
+  defaults: { _controller: BlogBundle:Blog:genUrl }
 
-# Internal routing configuration to handle ESI
-#_internal:
-#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
-#    prefix:   /_internal
+gen_url_template:
+  pattern: /gentemplate
+  defaults: { _controller: BlogBundle:Blog:genUrlTemplate }
