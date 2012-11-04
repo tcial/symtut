@@ -26,8 +26,18 @@ class ArticleController extends Controller
             )
         );
 
+        $uri_absolute = $router->generate(
+            'article_show',
+            array(
+                'culture' => 'de',
+                'year'    => 1000,
+                'title'   => 'generated'
+            ),
+            true
+        );
+
         return new Response(
-            "$router_match <br>$uri"
+            "$router_match<br>$uri<br>$uri_absolute"
         );
     }
 }
