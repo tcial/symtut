@@ -40,3 +40,8 @@ gen_url:
 gen_url_template:
   pattern: /gentemplate
   defaults: { _controller: BlogBundle:Blog:genUrlTemplate }
+
+
+testtwig:
+  resource: "@TTwigBundle/Resources/config/routing.yml"
+  prefix: /ttwig

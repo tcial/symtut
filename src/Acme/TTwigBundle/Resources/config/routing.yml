@@ -1,0 +1,3 @@
+ttwig:
+  pattern: /
+  defaults: { _controller: TTwigBundle:TTemplate:index }
