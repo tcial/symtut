@@ -13,12 +13,21 @@ class ArticleController extends Controller
 
     public function genUrlAction()
     {
-        $router = $this->get('router');
-        $result = $router->match('/articles/fr/2000/title');
-        $result = print_r($result, true);
+        $router       = $this->get('router');
+        $router_match = $router->match('/articles/fr/2000/title');
+        $router_match = print_r($router_match, true);
+
+        $uri = $router->generate(
+            'article_show',
+            array(
+                'culture' => 'de',
+                'year'    => 1000,
+                'title'   => 'generated'
+            )
+        );
 
         return new Response(
-            "$result"
+            "$router_match <br>$uri"
         );
     }
 }
