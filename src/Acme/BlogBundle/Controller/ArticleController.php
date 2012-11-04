@@ -36,8 +36,19 @@ class ArticleController extends Controller
             true
         );
 
+        $router->getContext()->setHost('anotherhost.com');
+        $uri_absolute_host = $router->generate(
+            'article_show',
+            array(
+                'culture' => 'de',
+                'year'    => 1000,
+                'title'   => 'generated'
+            ),
+            true
+        );
+
         return new Response(
-            "$router_match<br>$uri<br>$uri_absolute"
+            "$router_match<br>$uri<br>$uri_absolute<br>$uri_absolute_host"
         );
     }
 }
