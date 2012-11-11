@@ -13,7 +13,13 @@ class TTemplateController extends Controller
 
     public function phptemplateAction()
     {
-        return $this->render('TTwigBundle:Default:phptemplate.php');
+        return $this->render(
+            'TTwigBundle:Default:phptemplate.html.php',
+            array(
+                'subject' => 'subject from controller',
+                'message' => 'message from controller'
+            )
+        );
     }
 
     public function baseAction()
