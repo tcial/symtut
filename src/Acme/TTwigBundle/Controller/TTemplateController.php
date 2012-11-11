@@ -8,6 +8,16 @@ class TTemplateController extends Controller
 {
     public function indexAction()
     {
-        return new Response('twigcontroller');
+        return $this->render('TTwigBundle:Default:index.html.twig');
+    }
+
+    public function phptemplateAction()
+    {
+        return $this->render('TTwigBundle:Default:phptemplate.php');
+    }
+
+    public function baseAction()
+    {
+        return $this->render('TTwigBundle:Default:base.html.twig');
     }
 }

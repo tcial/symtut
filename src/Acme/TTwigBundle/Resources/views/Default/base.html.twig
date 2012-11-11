@@ -1,0 +1,12 @@
+{# extending the base template #}
+{% extends '::base.html.twig' %}
+{% block title %}That is a title{% endblock %}
+{% block body %}
+    {% block sidebar %}
+        muh
+        {{ parent() }}
+    {% endblock %}
+    {% for i in 1..10 %}
+        {{ i }}{{ cycle(['odd', 'even'], i) }}
+    {% endfor %}
+{% endblock %}

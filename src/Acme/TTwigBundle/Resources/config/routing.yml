@@ -1,3 +1,13 @@
 ttwig:
   pattern: /
-  defaults: { _controller: TTwigBundle:TTemplate:index }
+  defaults: { _controller: TTwigBundle:TTemplate:index}
+
+
+ttwig_phptemplate:
+  pattern: /phptemplate
+  defaults: { _controller: TTwigBundle:TTemplate:phptemplate }
+
+
+basetemplate:
+  pattern: /basetemplate
+  defaults: { _controller: TTwigBundle:TTemplate:base }
