@@ -9,3 +9,7 @@ article_show:
 articledetailsuse:
   pattern: /articledetailuse
   defaults: { _controller: BlogBundle:Article:detailuse }
+
+articlelist:
+  pattern: /articlelist
+  defaults: { _controller: BlogBundle:Article:listArticles }
