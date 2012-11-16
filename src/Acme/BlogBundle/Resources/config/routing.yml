@@ -5,3 +5,7 @@ article_show:
     culture: en|fr|de
     year: \d+
     _format: html|rss
+
+articledetailsuse:
+  pattern: /articledetailuse
+  defaults: { _controller: BlogBundle:Article:detailuse }

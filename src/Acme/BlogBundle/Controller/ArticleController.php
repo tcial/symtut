@@ -10,4 +10,18 @@ class ArticleController extends Controller
     {
         return new Response("show article $_route $_controller");
     }
+
+    public function detailuseAction()
+    {
+        return $this->render(
+            'BlogBundle:Blog:articledetails.html.twig',
+            array(
+                'article' => array(
+                    'title'   => 'articletitle',
+                    'author'  => 'articleauthor',
+                    'content' => 'articlecontent'
+                )
+            )
+        );
+    }
 }
