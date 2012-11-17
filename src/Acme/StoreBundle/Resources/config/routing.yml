@@ -5,3 +5,7 @@ acme_store_homepage:
 store_create:
     pattern: /store/create
     defaults: { _controller: AcmeStoreBundle:Default:create }
+
+store_show:
+    pattern: /store/show/{id}
+    defaults: { _controller: AcmeStoreBundle:Default:show, id:1 }
